@@ -11,62 +11,62 @@ html {
   background: white;
 
   &.contrast {
-    background: $color-black;
-    color: $color-contrast;
+	background: $color-black;
+	color: $color-contrast;
   }
-  
+
   &.invert {
-    filter: invert(1);
+	filter: invert(1);
   }
-  
+
   &.grayscale {
-    filter: grayscale(1);
+	filter: grayscale(1);
   }
-  
+
   &.invert.grayscale {
-    filter: invert(1) grayscale(1);
+	filter: invert(1) grayscale(1);
   }
-  
+
   &.animation {
-    .aos-animate {
-      -o-transition-property: none !important;
-      -moz-transition-property: none !important;
-      -ms-transition-property: none !important;
-      -webkit-transition-property: none !important;
-      transition-property: none !important;
+	.aos-animate {
+	  -o-transition-property: none !important;
+	  -moz-transition-property: none !important;
+	  -ms-transition-property: none !important;
+	  -webkit-transition-property: none !important;
+	  transition-property: none !important;
 
-      -o-transform: none !important;
-      -moz-transform: none !important;
-      -ms-transform: none !important;
-      -webkit-transform: none !important;
-      transform: none !important;
+	  -o-transform: none !important;
+	  -moz-transform: none !important;
+	  -ms-transform: none !important;
+	  -webkit-transform: none !important;
+	  transform: none !important;
 
-      -webkit-animation: none !important;
-      -moz-animation: none !important;
-      -o-animation: none !important;
-      -ms-animation: none !important;
-      animation: none !important;
-    }
+	  -webkit-animation: none !important;
+	  -moz-animation: none !important;
+	  -o-animation: none !important;
+	  -ms-animation: none !important;
+	  animation: none !important;
+	}
   }
-  
+
   &.cursor {
-    cursor: url("../img/accessibility/custom-cursor.png"), auto;
+	cursor: url("../img/accessibility/custom-cursor.png"), auto;
   }
-  
+
   &.font-medium {
-    font-size: 11px;
+	font-size: 11px;
   }
-  
+
   &.font-big {
-    font-size: 12px;
+	font-size: 12px;
   }
-  
+
   &.spacing-medium {
-    letter-spacing: 0.5px;
+	letter-spacing: 0.5px;
   }
-  
+
   &.spacing-big {
-    letter-spacing: 1px;
+	letter-spacing: 1px;
   }
 }
 
@@ -75,14 +75,14 @@ body {
 }
 
 .container {
-  padding-left: 4vw;
-  padding-right: 4vw;
+  padding-left: max(4vw, 24px);
+  padding-right: max(4vw, 24px);
   margin-left: auto;
   margin-right: auto;
-  max-width: 1248px;
+  max-width: calc(1248px + 8vw);
 
-  .container{
-    padding-left: 0;
-    padding-right: 0;
+  .container {
+	padding-left: 0;
+	padding-right: 0;
   }
 }
