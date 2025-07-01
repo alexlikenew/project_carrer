@@ -1,5 +1,5 @@
 .home-header {
-    margin-top: $total-nav-height;
+    //margin-top: $total-nav-height;
 
     @include breakpoint('tab-land') {
         margin-top: $nav-height * 1.5;
