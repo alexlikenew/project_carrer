@@ -1,0 +1,273 @@
+input,
+textarea,
+select {
+    width: 100%;
+    display: block;
+    border: 1px solid $border-primary;
+    padding: 10px 8px;
+    color: $text-secondary;
+    font-family: $font-primary;
+
+    &::placeholder {
+        color: $color-neutral;
+    }
+
+    &:focus-visible {
+        outline: none;
+        border-color: $color-primary;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &:disabled{
+        border: none;
+    }
+
+    &.input-error{
+        border: 1px solid $border-error;
+        background-color: $background-error;
+    }
+}
+
+input.alternate,
+textarea.alternate{
+    height: 32px;
+    background-color: $background-secondary;
+    border: none;
+    border-radius: 24px;
+    @include text-style(14px, 400);
+    padding: 0 16px;
+
+
+
+    &.border{
+        border: 1px solid $color-neutral-darkest;
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: $color-black;
+    &.input-error {
+        accent-color: $border-error;
+    }
+
+}
+
+textarea {
+    height: auto;
+    resize: none;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-transform: uppercase;
+    @include text-style(12px, 600);
+    color: $text-primary;
+
+    &:has(input[type="checkbox"]){
+        text-transform: none;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+
+}
+
+.input-icon-leading{
+    position: relative;
+
+    input{
+        padding-left: 36px;
+    }
+
+    svg{
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        width: 18px;
+        height: 18px;
+        color: $color-neutral;
+        transform: translateY(-50%);
+    }
+}
+
+.input-btn{
+    position: relative;
+
+    .btn{
+        position: absolute;
+        top: 50%;
+        right: 4px;
+        transform: translateY(-50%);
+
+        @include breakpoint(phone){
+            width: fit-content;
+        }
+    }
+}
+
+.checkbox-container{
+    display: flex;
+    gap: 8px;
+}
+
+.switch-container {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $background-tertiary;
+    transition: 0.4s;
+    border-radius: 100px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 2px;
+        bottom: 2px;
+        background-color: $background-primary;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+}
+
+input:checked{
+    & + .switch {
+        background-color: $color-black;
+    }
+
+    &:disabled + .switch {
+        opacity: .5;
+    }
+
+    & + .switch:before {
+        transform: translateX(20px);
+    }
+}
+
+input:focus + .switch {
+    box-shadow: 0 0 1px $color-black;
+}
+
+.range-slider {
+    background: $color-neutral-lightest;
+    height: 4px;
+
+    .range-slider__thumb {
+        width: 20px;
+        height: 20px;
+        background: $background-primary;
+        border: 2px solid $border-primary;
+        box-shadow: $shadow-small;
+    }
+
+    .range-slider__range {
+        background: $color-black;
+    }
+
+    &-container{
+        width: 100%;
+        padding-top: 8px;
+    }
+
+    &-inputs{
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input{
+            width: 80px;
+            text-align: center;
+        }
+    }
+}
+
+.form-row{
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+
+    .form-row{
+        margin: 0;
+    }
+    
+    &, label{
+        width: 100%;
+    }
+
+    @include breakpoint(phone) {
+        flex-direction: column;
+    }
+}
+
+.radio-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.radio-card{
+    border: 1px solid $border-primary;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    position: relative;
+    cursor: pointer;
+
+    img{
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+    }
+
+    &::before{
+        content: '';
+        border: 1px solid $border-primary;
+        border-radius: 50%;
+    }
+
+    svg, &::before{
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 18px;
+        height: 18px;
+        z-index: 1;
+    }
+
+    svg{
+        color: $color-white;
+    }
+
+    &:has(input:checked)::before{
+        background-color: $border-primary;
+    }
+}

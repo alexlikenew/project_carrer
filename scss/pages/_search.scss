@@ -1,0 +1,38 @@
+.search-page {
+    &-products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 40px 0;
+    }
+    &-category {
+        width: 100%;
+        &-title {
+            color: white;
+            background: $color-primary;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 0;
+        width: 95%;
+        margin: auto;
+    }
+    &-item {
+        &:hover {
+            .search-page-item-title {
+                color: $color-primary;
+            }
+        }
+        &-title {
+            font-weight: 500;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.chat-container {
+  padding: 24px 16px 16px 16px;
+  background: $background-primary;
+  box-shadow: $shadow-medium;
+  position: fixed;
+  right: 16px;
+  bottom: 96px;
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  max-width: 85vw;
+  z-index: 1;
+}
+
+.chat-icon {
+  width: 64px;
+  height: 64px;
+  background-color: $background-alternate;
+  color: $text-alternate;
+  box-shadow: $shadow-medium;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+  transition: all 200ms ease;
+
+  svg{
+    width: 32px;
+    height: 32px;
+  }
+
+  &:active{
+    transform: scale(0.95);
+  }
+}
+
+
+.chat{
+  background: $background-primary;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+
+  .chat-message-container{
+    margin-bottom: 8px;
+
+    &.client{
+      text-align: right;
+      color: $text-secondary;
+    }
+  }
+
+  &-input-container{
+    position: relative;
+
+    input{
+      padding-right: 32px;
+    }
+
+    button{
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+}

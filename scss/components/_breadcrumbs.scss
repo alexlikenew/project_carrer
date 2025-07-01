@@ -1,0 +1,16 @@
+ul.breadcrumbs {
+    margin-top: $total-nav-height;
+
+    @include breakpoint('tab-land') {
+        margin-top: $nav-height * 1.5;
+    }
+    
+    &, li{
+        display: flex;
+        gap: 6px;
+    }
+
+    li:not(:last-child)::after {
+        content: '/';
+    }
+}

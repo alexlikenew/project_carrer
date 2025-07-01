@@ -1,0 +1,147 @@
+:root{
+    --font-family: "Open Sans", serif;
+    --text-color: #000000;
+    --url-color: #00703D;
+    --url-decoration: underline;
+    --headline-weight: 600;
+
+    --background-color: #fff;
+    --on-background-color: #000;
+    
+    --primary-color: #F0F0F0;
+    --on-primary-color: #000;
+
+    --accent-color: #f04e1f;
+    --on-accent-color: #fff;
+
+    --argonium-logo-color: #000;
+
+    --border-color: #F0F0F0;
+    --border-radius: 4px;
+
+    --shadow: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03);
+    --margin: .5rem;
+}
+
+.modal-cookies {
+    max-width: 650px;
+    position: fixed;
+    z-index: 100;
+    bottom: var(--margin);
+    right: var(--margin);
+    overflow: hidden;
+    transition: all 0.3s;
+    display: none;
+    width: 90%;
+
+    &.open{
+        display: block;
+    }
+
+    &-argonium{
+        span{
+            display: block;
+        }
+
+        svg{
+            height: 26px;
+            width: auto;
+            margin-top: 2px;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 12px 12px 16px;
+    }
+}
+
+.modal-cookies-content-container {
+    padding: 0 24px 24px;
+    overflow-y: auto;
+}
+
+.modal-cookies-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid $border-secondary;
+    border-top: 1px solid $border-secondary;
+}
+
+.modal-cookies-option {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 82px;
+
+    &-empty {
+        color: var(--text-color);
+        opacity: .5;
+    }
+
+    &:not(:last-child) {
+        border-right: 1px solid $border-secondary;
+    }
+}
+
+.cookies-widget {
+    transition: all 0.3s;
+    width: fit-content;
+    max-width: 410px;
+    word-wrap: break-word;
+
+    &-content{
+        padding: 24px 24px 0 24px;
+    }
+
+    .text-regular-semi-bold{
+        display: block;
+        margin-top: 12px;
+    }
+
+    li:has(svg){
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 8px 0;
+
+        svg{
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+@include breakpoint(phone) {
+    .modal-cookies{
+        bottom: 0;
+        right: 0;
+        width: 100%;
+
+        &-footer{
+            text-align: center;
+            flex-direction: column-reverse;
+            gap: 16px;
+        }
+    }
+
+    .modal-cookies-options {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-cookies-option {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px;
+        height: auto;
+
+        &:not(:last-child) {
+            border: none;
+        }
+    }
+}

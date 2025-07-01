@@ -1,0 +1,80 @@
+$accessibility-width: 248px;
+
+.accessibility-icon{
+  position: fixed;
+  top: 20%;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  left: calc($accessibility-width * -1);
+  z-index: 2;
+  transition: all 0.3s;
+  cursor: pointer;
+  
+  &.active{
+    left: 0;
+  }
+
+  .accessibility-container{
+    width: $accessibility-width;
+    border: 1px solid $border-primary;
+    box-shadow: $shadow-small;
+    padding: 12px;
+    background-color: $background-alternate;
+    text-align: center;
+    
+    &, .btn{
+      color: $text-alternate;
+    }
+
+    .btn{
+      border-radius: 0;
+      border-top: 1px solid $border-alternate;
+      padding-top: 12px;
+      margin-top: 12px;
+      width: 100%;
+
+      &.active{
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+html.accessibility-grayscale {
+  filter: grayscale(100%);
+}
+
+html.accessibility-invert {
+  filter: invert(100%);
+}
+
+html.accessibility-animation *{
+  transition-duration: 0 !important;
+  transition: none !important;
+  transition-property: none !important;
+}
+
+html.accessibility-contrast {
+  filter: contrast(200%);
+}
+
+html.accessibility-cursor {
+  cursor: url('/img/accessibility/custom-cursor.png'), auto;
+}
+
+html.accessibility-font-medium{
+  font-size: 120%;
+}
+
+html.accessibility-font-big{
+  font-size: 150%;
+}
+
+html.accessibility-spacing-medium{
+  letter-spacing: 0.2rem;
+}
+
+html.accessibility-spacing-big{
+  letter-spacing: 0.4rem;
+}

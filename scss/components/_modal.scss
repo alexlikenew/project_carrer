@@ -1,0 +1,108 @@
+.modal,
+.modal-cookies{
+    background: $background-primary;
+    box-shadow: $shadow-large;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 100;
+    max-width: 600px;
+    width: 90%;
+
+    .actions{
+        margin-top: 24px;
+        justify-content: flex-end;
+    }
+
+    &-center{
+        text-align: center;
+        text-wrap: balance;
+
+        .modal-header{
+            margin-top: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+
+            svg{
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        .actions{
+            margin-top: 0;
+            margin-bottom: 24px;
+            justify-content: center;
+        }
+    }
+
+    @include breakpoint(phone) {
+        width: 100%;
+    }
+
+    &-row{
+        margin: 16px 0;
+
+        &-header{
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+
+    &-header,
+    &-content,
+    &-footer{
+        padding: 16px;
+    }
+
+    &-product-card{
+        margin: 12px 0;
+        display: flex;
+        gap: 8px;
+
+        img{
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+    }
+}
+
+.widget{
+    position: fixed;
+    margin: 8px;
+    z-index: 100;
+    box-shadow: $shadow-medium;
+
+    &-bg{
+        background-color: $background-primary;
+        color: $text-primary;
+    }
+
+    &-bg-alternate{
+        background-color: $background-alternate;
+        color: $text-alternate;
+    }
+
+    &-social-media{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 24px 12px 16px;
+        width: 128px;
+        text-align: center;
+
+        svg{
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

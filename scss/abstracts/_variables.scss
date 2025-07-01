@@ -1,0 +1,97 @@
+// Primitive Colors
+    // Color Brand
+    $color-primary: #000;
+    $color-secondary: #fff;
+    
+    // Color Neutral
+    $color-black: #000000;
+    $color-white: #FFFFFF;
+    $color-neutral-lightest: #FAFAFA;
+    $color-neutral-lighter: #F2F2F2;
+    $color-neutral-light: #AAAAAA;
+    $color-neutral: #666666;
+    $color-neutral-dark: #444444;
+    $color-neutral-darker: #222222;
+    $color-neutral-darkest: #333333;
+    
+    // Color System
+    $color-success-green: #027A48;
+    $color-success-green-light: #ecfdf3;
+    $color-error-red: #b42318;
+    $color-error-red-light: #fef3f2;
+
+// Semantic Colors
+    // Background Color
+    $background-primary: $color-white ;
+    $background-secondary: $color-neutral-lighter;
+    $background-tertiary: $color-neutral-dark;
+    $background-alternate: $color-neutral-darkest;
+    $background-success: $color-success-green-light;
+    $background-error: $color-error-red-light;
+
+    // Border Color
+    $border-primary: $color-neutral-lighter;
+    $border-secondary: $color-neutral-darkest;
+    $border-tertiary: $color-neutral-dark;
+    $border-alternate: $color-white ;
+    $border-success: $color-success-green;
+    $border-error: $color-error-red;
+
+    // Text Color
+    $text-primary: $color-neutral-darkest;
+    $text-secondary: $color-neutral;
+    $text-alternate: $color-white;
+    $text-success: $color-success-green;
+    $text-error: $color-error-red;
+
+    // Link Color
+    $link-primary: $color-black;
+    $link-secondary: $color-neutral;
+    $link-alternate: $color-white;
+
+// Shadows
+    $shadow-xxsmall: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    $shadow-xsmall: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    $shadow-small: 0px 4px 8px -2px rgba(0, 0, 0, 0.10), 0px 2px 4px -2px rgba(0, 0, 0, 0.06);
+    $shadow-medium: 0px 12px 16px -4px rgba(0, 0, 0, 0.08), 0px 4px 6px -2px rgba(0, 0, 0, 0.03);
+    $shadow-large: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
+    $shadow-xlarge: 0px 24px 48px -12px rgba(0, 0, 0, 0.18);
+    $shadow-xxlarge: 0px 32px 64px -12px rgba(0, 0, 0, 0.14);
+
+// Classes
+    .background-primary{ background-color: $background-primary; }
+    .background-secondary{ background-color: $background-secondary; }
+    .background-tertiary{ background-color: $background-tertiary; }
+    .background-alternate{ background-color: $background-alternate; }
+    .background-success{ background-color: $background-success; }
+    .background-error{ background-color: $background-error; }
+    
+    .border-primary{ border-color: $border-primary; }
+    .border-secondary{ border-color: $border-secondary; }
+    .border-tertiary{ border-color: $border-tertiary; }
+    .border-alternate{ border-color: $border-alternate; }
+    .border-success{ border-color: $border-success; }
+    .border-error{ border-color: $border-error; }
+    
+    .text-primary{ color: $text-primary; }
+    .text-secondary{ color: $text-secondary; }
+    .text-alternate{ color: $text-alternate; }
+    .text-success{ color: $text-success; }
+    .text-error{ color: $text-error; }
+    
+    .link-primary{ color: $link-primary; }
+    .link-secondary{ color: $link-secondary; }
+    .link-alternate{ color: $link-alternate; }
+
+    .shadow-xxsmall{ box-shadow: $shadow-xxsmall; }
+    .shadow-xsmall{ box-shadow: $shadow-xsmall; }
+    .shadow-small{ box-shadow: $shadow-small; }
+    .shadow-medium{ box-shadow: $shadow-medium; }
+    .shadow-large{ box-shadow: $shadow-large; }
+    .shadow-xlarge{ box-shadow: $shadow-xlarge; }
+    .shadow-xxlarge{ box-shadow: $shadow-xxlarge; }
+
+// Old
+$color-contrast: #DDD133;
+
+$font-primary: "Poppins", sans-serif;

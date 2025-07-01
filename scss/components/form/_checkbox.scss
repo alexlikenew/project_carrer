@@ -1,0 +1,30 @@
+.checkbox {
+  &-container {
+	display: flex;
+	gap: 10px;
+	font-size: 10px;
+  }
+
+
+
+  &-mark {
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	//border: 1px solid $color-brand;
+	background: white;
+	flex-shrink: 0;
+
+	&.input-error {
+	  border: 1px solid $border-error;
+
+	}
+  }
+
+  &-input:checked ~ .checkbox-mark {
+	//background-color: $color-brand;
+	background-image: url(../img/icons/checkmark.svg);
+	background-position: center;
+	background-size: contain;
+  }
+}

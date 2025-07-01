@@ -1,0 +1,106 @@
+// OLD STYLES
+
+.autocomplete-container {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.1), 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    overflow: auto;
+    max-height: 90vh;
+    width: 90vw;
+    max-width: 900px;
+    left: -15vw;
+    right: 0;
+    margin: auto;
+    @include breakpoint(tab-land) {
+        top: 55px;
+    }
+    @include breakpoint(tab-port) {
+        left: 0;
+    }
+    @include breakpoint(phone) {
+        flex-direction: column;
+    }
+
+    .search-item {
+        padding: 10px 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        max-width: 400px;
+        &:hover {
+            border-radius: 4px;
+            background: #f9fafb;
+        }
+    }
+    .search-product {
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 8px;
+        margin-bottom: 10px;
+        transition: border-color 0.2s;
+        &:hover {
+            border-color: #9ca3af;
+            cursor: pointer;
+        }
+        .photo-container {
+            min-width: 200px;
+            height: 90px;
+            @include breakpoint(phone) {
+                min-width: 0;
+            }
+            .search-product-photo {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+                object-position: center;
+            }
+        }
+
+        .price {
+            color: $color-primary;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .title {
+            font-size: 16px;
+        }
+    }
+
+    .see-all {
+        margin: 10px 0 0 auto;
+        width: fit-content;
+        &-container {
+            padding-bottom: 20px;
+        }
+    }
+    .left {
+        flex: 1 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .autocomplete-products {
+        flex: 2 0 0;
+    }
+    .search-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.contrast {
+    .autocomplete-container {
+        background-color: $color-black;
+    }
+}

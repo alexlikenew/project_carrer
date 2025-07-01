@@ -1,0 +1,117 @@
+.inspirations-swiper{
+  margin: 40px 0;
+  padding: 0 32px;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  .swiper-arrows{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(phone){
+      display: none;
+    }
+  }
+}
+
+.inspirations-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+
+  @include breakpoint(phone){
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @include breakpoint(xs){
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.inspiration-card{
+  img{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+
+  span{
+    display: block;
+    margin: 24px 0 8px;
+  }
+}
+
+.markers-photo-container{
+  position: relative;
+
+  .marker{
+    position: absolute;
+    z-index: 1;
+
+    @include breakpoint(phone){
+      display: none;
+    }
+
+    &::before{
+      content: '';
+      display: block;
+      background-color: $background-primary;
+      border: 1px solid $border-primary;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    &-card{
+      padding: 16px;
+      background-color: $background-primary;
+      box-shadow: $shadow-medium;
+      display: none;
+      transform: translate(30px, calc(-50% - 10px));
+    }
+
+    &:hover{
+      .marker-card{
+        display: block;
+      }
+      
+      &::before{
+        scale: 1.25;
+      }
+    }
+  }
+}
+
+.contrast {
+  .inspiration-page .blog-reviews .reviews-subtitle {
+    color: $color-contrast;
+  }
+  .inspiration-page .blog-reviews .review-card .review-date {
+    color: $color-contrast;
+  }
+  .inspiration-page .marker-info {
+    background: black;
+    .bottom img {
+      filter: brightness(0) invert(86%) sepia(70%) saturate(524%)
+        hue-rotate(347deg) brightness(88%) contrast(96%);
+    }
+  }
+}

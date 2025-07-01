@@ -1,0 +1,95 @@
+.footer-top{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $background-alternate;
+  color: $text-alternate;
+  font-family: $font-secondary;
+  
+  .container{
+    &, ul{
+      display: flex;
+      gap: 10%;
+    }
+
+    ul{
+      flex-grow: 1;
+
+      li{
+        width: 100%;
+      }
+    }
+
+    .social-media-menu{
+      width: 100%;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+
+      li{
+        width: fit-content;
+      }
+
+      svg{
+        color: $text-alternate;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @include breakpoint(tab-land){
+      flex-direction: column;
+      gap: 32px;
+    }
+    
+    @include breakpoint(phone){
+      ul{
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .social-media-menu{
+        flex-direction: row;
+      }
+    }
+  }
+
+  .logo{
+    width: auto;
+    height: 24px;
+    margin-bottom: 24px;
+  }
+
+  p{
+    margin: 12px 0;
+  }
+
+  .text-medium-medium{
+    display: block;
+    font-family: $font-primary;
+    margin-bottom: 24px;
+  }
+
+  .footer-submenu{
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.footer-bottom{
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  a{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    width: 100%;
+    
+    svg{
+      height: 26px;
+      width: auto;
+    }
+  }
+}

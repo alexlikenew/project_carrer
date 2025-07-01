@@ -1,0 +1,88 @@
+.cart{
+    margin-top: calc($nav-height + 64px);
+
+    section{
+        margin: 46px 0;
+
+        .section-header{
+            width: 100%;
+            display: block;
+            padding: 12px 0;
+            margin-bottom: 24px;
+            border-bottom: 1px solid $border-primary;
+        }
+    }
+
+    .radio-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    
+        @include breakpoint(tab-port) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        @include breakpoint(phone) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+    
+        @include breakpoint(xs) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.cart-table{
+    width: 100%;
+    border-spacing: 0;
+    
+    thead{
+        text-align: left;
+    }
+
+    th, td{
+        padding: 12px 24px;
+        border-bottom: 1px solid $border-primary;
+    }
+
+    .product{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        img{
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+    }
+}
+
+.cart-footer{
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    margin: 46px 0 64px;
+    justify-content: space-between;
+    
+    &-summary{
+        table{
+            margin-bottom: 24px;
+    
+            tr td{
+                &:first-child{
+                    padding-right: 32px;
+                }
+        
+                &:last-child{
+                    text-align: right;
+                }
+            }
+        }
+    
+        .btn{
+            width: 100%;
+        }
+    }
+}

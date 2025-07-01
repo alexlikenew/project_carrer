@@ -1,0 +1,346 @@
+// OLD STYLES
+
+.orders-heading {
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    margin: 50px 0 40px 0;
+}
+
+.outer-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto 80px auto;
+    border: 1px #f2f2f2 solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inner-container {
+    padding: 40px 0 60px 0;
+}
+
+.orders-nav {
+    display: flex;
+}
+.orders-nav .nav-item {
+    width: 50%;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.orders-nav .nav-item.active {
+    color: #b3b3b3;
+    background: #f2f2f2;
+}
+
+.order {
+    width: 90%;
+    margin: auto;
+    padding: 15px 30px 15px 15px;
+    border-radius: 5px;
+    border: 1px solid #e5e7eb;
+    margin-top: 10px;
+}
+
+.order-overview {
+    display: flex;
+    gap: 30px;
+    font-size: 16px;
+}
+
+.order-overview .info-title {
+    font-weight: 500;
+}
+
+.order-overview .btn {
+    margin-left: auto;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+.order-overview .btn-expand.rotated svg {
+    transform: rotate(180deg);
+}
+
+.expanded-content {
+    margin: 20px 0;
+}
+
+.details-titles {
+    display: flex;
+    font-weight: 500;
+    border-bottom: 1px #f2f2f2 solid;
+    padding: 10px 45px 10px 5px;
+    text-align: center;
+    gap: 20px;
+}
+
+.details-titles .product {
+    flex: 1 0 0;
+    text-align: left;
+}
+.details-titles .price {
+    width: 125px;
+}
+.details-titles .amount {
+    width: 125px;
+}
+.details-titles .total {
+    width: 125px;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    padding: 20px 45px 20px 5px;
+    border-bottom: 1px #f2f2f2 solid;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-details .number,
+.product-details .name {
+    min-width: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product-details .number {
+    min-width: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product-details .product-main {
+    flex: 1 0 0;
+    text-align: left;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.product-details .product-main-photo {
+    width: 70px;
+    height: 70px;
+}
+
+.product-details .product-main-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.product-main-photo-fill {
+    height: 100%;
+    width: 100%;
+    background: $color-primary;
+}
+
+.product-details .price,
+.product-details .amount,
+.product-details .total {
+    width: 125px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-details .amount-text {
+    font-weight: 400;
+}
+
+.product-details .amount-mobie {
+    display: none;
+}
+
+.order-summary {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.summary-block {
+    width: 45%;
+    margin-top: 40px;
+}
+
+.summary-block h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 150%;
+}
+
+.data-heading {
+    font-weight: 700;
+    font-size: 24px;
+    color: #39423b;
+    margin: 45px 0 10px 0;
+}
+
+.header .data-heading {
+    margin: 0;
+}
+
+.inner-container.data {
+    padding: 0 5%;
+}
+
+.inputs-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputs-container > * {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+.btn-outline {
+    background: white;
+    justify-content: center;
+}
+
+.address.order {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+}
+.address-label {
+    font-weight: 700;
+}
+.delivery-addresses .btn {
+    margin: 40px 0 40px auto;
+    display: block;
+    text-align: center;
+}
+.delete {
+    cursor: pointer;
+}
+
+.modal-form {
+    margin-top: 0;
+}
+
+.modal-form .form-input {
+    margin-bottom: 10px;
+}
+
+.modal-form .btn-primary {
+    display: block;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 1060px) {
+    .order-overview {
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        padding-right: 40px;
+    }
+    .order-overview .info-title,
+    .order-overview .info-content {
+        display: inline;
+    }
+    .btn-expand {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+    .order {
+        padding: 20px;
+    }
+    .details-titles {
+        display: none;
+    }
+    .product-details {
+        column-gap: 0;
+        row-gap: 10px;
+        padding: 20px 0;
+        border-bottom: none;
+        border-top: 1px #f2f2f2 solid;
+    }
+    .product-details .price {
+        display: none;
+    }
+    .product-details .total,
+    .product-details .amount {
+        width: 50%;
+    }
+    .product-details .amount {
+        text-align: left;
+    }
+    .product-details .total {
+        text-align: right;
+    }
+    .product-details .product-main {
+        flex: auto;
+        width: 100%;
+    }
+    .product-details .product-main-photo {
+        min-width: 70px;
+    }
+    .order-summary {
+        flex-direction: column;
+        width: 100%;
+    }
+    .order-summary .summary-block {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .orders-nav .nav-item {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .inner-container {
+        padding: 40px 0;
+    }
+}
+
+.night .data-heading {
+    color: white;
+}
+
+.night .orders-nav .nav-item.active {
+    background: white;
+    color: black;
+}
+
+.night .btn-img {
+    filter: brightness(0) invert(1);
+}
+
+.font-bigger .order-overview,
+.font-bigger .summary-block h2,
+.font-bigger .product-details .number {
+    font-size: 18px !important;
+}
+
+.font-biggest .order-overview,
+.font-biggest .summary-block h2,
+.font-biggest .product-details .number {
+    font-size: 20px !important;
+}

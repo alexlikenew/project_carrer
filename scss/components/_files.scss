@@ -1,0 +1,55 @@
+.files {
+  display: grid;
+  grid-template: auto / repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 80px;
+
+  @include breakpoint(tab-port) {
+    grid-template: auto / repeat(3, 1fr);
+  }
+
+  @include breakpoint(phone) {
+    grid-template: auto / repeat(2, 1fr);
+  }
+
+  @include breakpoint(xs) {
+    grid-template: auto / repeat(1, 1fr);
+  }
+
+  &-title {
+    font-family: $font-heading-bold;
+    font-size: 24px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #B3B3B3;
+    padding: 30px;
+
+    img { @include image-contain }
+    &-content {
+      width: 80%;
+
+      .title {
+        font-size: 16px;
+        line-height: 1.1;
+      }
+    }
+  }
+}
+
+.font-bigger {
+  .files-item-content .title {
+      font-size: 18px !important;
+  }
+}
+
+.font-biggest {
+  .files-item-content .title {
+    font-size: 20px !important;
+  }
+}

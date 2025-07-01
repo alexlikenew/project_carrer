@@ -1,0 +1,40 @@
+.popular-categories {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(phone) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &-subtitle {
+        margin-top: 4px;
+        font-size: 1.8rem;
+        color: #374151; 
+    }
+    &-btn {
+        font-size: 1.2rem;
+        font-weight: 500;
+        @include breakpoint(phone) {
+            width: 100%;
+        }
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px ;
+        margin-top: 40px;
+        @include breakpoint(xs) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            .category-card {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+button,
+.btn{
+    display: flex;
+    padding: 8px 24px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 200ms ease;
+    background-color: inherit;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    width: fit-content;
+    @include text-style(16px, 400);
+    font-family: $font-primary;
+
+    svg, img{
+        width: 24px;
+        height: 24px;
+    }
+
+    &:disabled,
+    &.disabled{
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    &.btn-icon{
+        padding: 12px;
+    }
+
+    &.btn-small{
+        height: 32px;
+        padding: 0 20px;
+        @include text-style(14px, 400);
+        font-family: $font-primary;
+
+        &.btn-icon{
+            padding: 8px;
+        }
+    }
+
+    &.wide{
+        width: 300px;
+        min-width: fit-content;
+        max-width: 100%;
+        justify-content: space-between;
+
+        @include breakpoint(tab-port){
+            width: auto;
+        }
+    }
+
+    &.full-width{
+        width: 100%;
+    }
+
+    @include breakpoint(phone){
+        width: 100%;
+    }
+}
+
+.btn-primary{
+    color: $color-neutral-darkest;
+    border: 1px solid $color-neutral-darkest;
+    background-color: $color-neutral-lighter;
+
+    &:hover{
+        background-color: $color-neutral-lightest;
+    }
+
+    &:active{
+        background-color: $color-neutral-lighter;
+    }
+
+    &.alternate{
+        background-color: #FAFAFA50;
+
+        &:hover{
+            background-color: $color-neutral-lightest;
+        }
+
+        &:active{
+            background-color: $color-neutral-lighter;
+        }
+    }
+}
+
+.btn-secondary{
+    color: $color-neutral-darkest;
+    background-color: $color-neutral-lighter;
+
+    &:hover{
+        background-color: $color-neutral-lightest;
+    }
+
+    &:active{
+        background-color: $color-neutral-lighter;
+    }
+}
+
+.btn-tertiary{
+    &:hover{
+        background-color: $color-neutral-lightest;
+    }
+
+    &:active{
+        background-color: $color-neutral-lighter;
+    }
+}
+
+.btn-link{
+    padding: 0;
+}
+
+button.swiper-arrow{
+    padding-left: 0;
+    padding-right: 0;
+}
